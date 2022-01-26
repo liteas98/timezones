@@ -1,0 +1,48 @@
+{
+    "name": "liteas98/timezones",
+    "description": "My awesome package",
+    "keywords": [
+        "liteas98",
+        "timezones"
+    ],
+    "authors": [
+        {
+            "name": "Mostafa Eid",
+            "email": "lost.mostafa92@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.81"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.24",
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Liteas98\\Timezones\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liteas98\\Timezones\\TimezonesServiceProvider"
+            ],
+            "aliases": {
+                "Timezones": "Liteas98\\Timezones\\TimezonesFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
